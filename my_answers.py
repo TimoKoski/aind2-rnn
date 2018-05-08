@@ -57,10 +57,10 @@ def window_transform_text(text, window_size, step_size):
     outputs = []
     
     # TK: the range for i now depends on text length, window_size and step_size
-    for i in range(0, int((len(text)-step_size)/(window_size-step_size))):
+    for i in range(0, int((len(text)-window_size)/(step_size))):
         # appending the inputs with string rather than chars of the string
-        inputs.append(text[i+(i*step_size):i+(i*step_size)+window_size])
-        outputs.append(text[i+(i*step_size)+window_size])
+        inputs.append(text[(i*step_size):(i*step_size)+window_size])
+        outputs.append(text[(i*step_size)+window_size])
 
     return inputs,outputs
 

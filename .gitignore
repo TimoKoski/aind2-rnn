@@ -16,3 +16,9 @@ __pycache__/
 .venv
 venv/
 ENV/
+
+#TK additions 
+BACKUP*
+RNN_project.html
+*.json
+*.zip
