@@ -57,6 +57,8 @@ def window_transform_text(text, window_size, step_size):
     outputs = []
     
     # TK: the range for i now depends on text length, window_size and step_size
+    # Help for the bug fix from
+    # https://discussions.udacity.com/t/implement-a-function-to-window-a-large-text-corpus-incorrect-inputs-length/401279
     for i in range(0, int((len(text)-window_size)/(step_size))+1):
         # appending the inputs with string rather than chars of the string
         inputs.append(text[(i*step_size):(i*step_size)+window_size])
